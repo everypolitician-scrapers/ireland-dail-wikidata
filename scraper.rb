@@ -3,5 +3,6 @@
 
 require 'wikidata/fetcher'
 
-names = WikiData::Category.new( 'Category:Members of the 31st Dáil', 'en').member_titles
+names = WikiData::Category.new( 'Category:Members of the 31st Dáil', 'en').member_titles |
+        WikiData::Category.new( 'Category:Members of the 32nd Dáil', 'en').member_titles
 EveryPolitician::Wikidata.scrape_wikidata(names: { en: names }, output: false)
