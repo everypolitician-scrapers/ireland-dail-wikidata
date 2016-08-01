@@ -5,7 +5,7 @@ require 'wikidata/fetcher'
 
 en_names = EveryPolitician::Wikidata.wikipedia_xpath( 
   url: 'https://en.wikipedia.org/wiki/Members_of_the_32nd_D%C3%A1il',
-  after: '//h2[span[@id="TDs_by_constituency"]]',
+  after: '//h2[span[@id="TDs_by_party"]]',
   xpath: '//table[1]//td[position() = last() - 1]//a[not(@class="new")]/@title',
 ) 
   
