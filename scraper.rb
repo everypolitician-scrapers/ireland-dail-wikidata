@@ -8,6 +8,8 @@ en_names = EveryPolitician::Wikidata.wikipedia_xpath(
   after: '//h2[span[@id="TDs_by_party"]]',
   xpath: '//table[1]//td[position() = last() - 1]//a[not(@class="new")]/@title',
 ) 
+
+warn "Names: #{en_names.join(", ")}"
   
 names = WikiData::Category.new( 'Category:Members of the 31st Dáil', 'en').member_titles |
         WikiData::Category.new( 'Category:Members of the 32nd Dáil', 'en').member_titles |
